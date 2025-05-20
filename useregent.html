@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect by OS</title>
+  <script>
+    window.onload = function () {
+      const ua = navigator.userAgent.toLowerCase();
+
+      if (ua.includes("android")) {
+        window.location.href = "https://www.google.com";
+      } else if (ua.includes("iphone") || ua.includes("ipad") || ua.includes("ipod")) {
+        window.location.href = "https://www.appel.com"; // Typo corrected to "apple.com" below
+      } else if (ua.includes("mac os x")) {
+        window.location.href = "https://www.mac.com";
+      } else if (ua.includes("windows nt")) {
+        window.location.href = "https://www.microsoft.com";
+      } else if (ua.includes("linux")) {
+        window.location.href = "https://www.ubuntu.com";
+      } else {
+        // Default redirect (optional)
+        window.location.href = "https://example.com";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
